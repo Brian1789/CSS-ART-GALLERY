@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Art Gallery</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Prism.js for syntax highlighting -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+</head>
+<body>
+  <header>
+    <h1>🎨 CSS Art Gallery</h1>
+    <p>Pure HTML & CSS visual creations</p>
+  </header>
+  <main class="gallery">
+    <!-- Art Card 1 -->
+    <section class="art-card">
+      <img class="artwork art-photo" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Sunset Landscape">
+      <h2 class="art-title">Sunset Landscape</h2>
+      <details class="code-toggle">
+        <summary>👁️ View Code</summary>
+        <pre><code class="language-html">&lt;img class="artwork art-photo" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Sunset Landscape"&gt;</code></pre>
+      </details>
+    </section>
+    <!-- Art Card 2 -->
+    <section class="art-card">
+      <img class="artwork art-photo" src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Minimalist Flower">
+      <h2 class="art-title">Minimalist Flower</h2>
+      <details class="code-toggle">
+        <summary>👁️ View Code</summary>
+        <pre><code class="language-html">&lt;img class="artwork art-photo" src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Minimalist Flower"&gt;</code></pre>
+      </details>
+    </section>
+    <!-- Art Card 3 -->
+    <section class="art-card">
+      <img class="artwork art-photo" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=400&q=80" alt="Geometric Mountain">
+      <h2 class="art-title">Geometric Mountain</h2>
+      <details class="code-toggle">
+        <summary>👁️ View Code</summary>
+        <pre><code class="language-html">&lt;img class="artwork art-photo" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=400&q=80" alt="Geometric Mountain"&gt;</code></pre>
+      </details>
+    </section>
+    <!-- Art Card 4 -->
+    <section class="art-card">
+      <div class="artwork art-heart"></div>
+      <h2 class="art-title">CSS Heart</h2>
+      <details class="code-toggle">
+        <summary>👁️ View Code</summary>
+        <pre><code class="language-css">/* CSS Heart */
+.art-heart {
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
+.art-heart::before,
+.art-heart::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 60px;
+  width: 60px;
+  height: 100px;
+  background: #e25555;
+  border-radius: 60px 60px 0 0;
+  transform: rotate(-45deg);
+}
+.art-heart::after {
+  left: 0;
+  transform: rotate(45deg);
+}
+</code></pre>
+      </details>
+    </section>
+    <!-- Art Card 5 -->
+    <section class="art-card">
+      <div class="artwork art-star"></div>
+      <h2 class="art-title">CSS Star</h2>
+      <details class="code-toggle">
+        <summary>👁️ View Code</summary>
+        <pre><code class="language-css">/* CSS Star */
+.art-star {
+  width: 120px;
+  height: 120px;
+  background: transparent;
+  position: relative;
+}
+.art-star::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  background: #ffd700;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  transform: translate(-50%, -50%);
+}
+</code></pre>
+      </details>
+    </section>
+    <!-- Art Card 6 -->
+    <section class="art-card">
+      <div class="artwork art-avatar"></div>
+      <h2 class="art-title">CSS Avatar</h2>
+      <details class="code-toggle">
+        <summary>👁️ View Code</summary>
+        <pre><code class="language-css">/* CSS Avatar */
+.art-avatar {
+  width: 100px;
+  height: 100px;
+  background: #ffe0b2;
+  border-radius: 50%;
+  position: relative;
+}
+.art-avatar::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  width: 60px;
+  height: 30px;
+  background: #bdbdbd;
+  border-radius: 0 0 30px 30px;
+  transform: translateX(-50%);
+}
+.art-avatar::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 35px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: -18px 0 #fff, 18px 0 #fff;
+  transform: translateX(-50%);
+}
+</code></pre>
+      </details>
+    </section>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+</body>
+</html>

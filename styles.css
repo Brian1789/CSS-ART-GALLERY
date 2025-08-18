@@ -1,0 +1,195 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #181818;
+  color: #f3f3f3;
+  margin: 0;
+  min-height: 100vh;
+}
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+}
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+}
+header p {
+  color: #aaa;
+  font-size: 1.1rem;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.art-card {
+  background: #222;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 1.5rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.art-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.28);
+}
+.art-title {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #ffd700;
+}
+.artwork {
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+}
+.art-photo {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+/* Artworks (see index.html for code) */
+
+.art-heart {
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
+.art-heart::before,
+.art-heart::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 60px;
+  width: 60px;
+  height: 100px;
+  background: #e25555;
+  border-radius: 60px 60px 0 0;
+  transform: rotate(-45deg);
+}
+.art-heart::after {
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.art-star {
+  width: 120px;
+  height: 120px;
+  background: transparent;
+  position: relative;
+}
+.art-star::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100px;
+  height: 100px;
+  background: #ffd700;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  transform: translate(-50%, -50%);
+}
+
+.art-avatar {
+  width: 100px;
+  height: 100px;
+  background: #ffe0b2;
+  border-radius: 50%;
+  position: relative;
+}
+.art-avatar::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 60px;
+  width: 60px;
+  height: 30px;
+  background: #bdbdbd;
+  border-radius: 0 0 30px 30px;
+  transform: translateX(-50%);
+}
+.art-avatar::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 35px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: -18px 0 #fff, 18px 0 #fff;
+  transform: translateX(-50%);
+}
+
+/* Toggle code styles */
+.code-toggle {
+  width: 100%;
+  margin-top: 0.5rem;
+  background: #181818;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(.4,0,.2,1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.code-toggle[open] {
+  max-height: 400px;
+}
+.code-toggle summary {
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffd700;
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  border: none;
+  background: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  transition: color 0.2s;
+}
+.code-toggle summary:hover {
+  color: #fff;
+}
+.code-toggle pre {
+  margin: 0;
+  padding: 1rem;
+  background: #222;
+  border-radius: 0 0 10px 10px;
+  font-size: 0.95rem;
+  overflow-x: auto;
+  transition: background 0.2s;
+}
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1.2rem;
+  }
+  .art-card {
+    padding: 1rem 0.5rem;
+  }
+}
