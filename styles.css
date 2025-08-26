@@ -144,6 +144,27 @@ header p {
   transform: translateX(-50%);
 }
 
+.art-black-hole {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #ff0 0%, #f00 50%, #000 75%);
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.art-spiral {
+  width: 120px;
+  height: 120px;
+  background: repeating-radial-gradient(circle, #fff, #fff 10px, #000 10px, #000 20px);
+  border-radius: 50%;
+  animation: spin 5s linear infinite;
+}
+
 /* Toggle code styles */
 .code-toggle {
   width: 100%;
