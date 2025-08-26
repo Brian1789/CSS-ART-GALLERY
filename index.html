@@ -150,6 +150,45 @@
 </code></pre>
       </details>
     </section>
+    <!-- Art Card 7: Black Hole -->
+    <section class="art-card">
+      <div class="artwork art-black-hole"></div>
+      <h2 class="art-title">Black Hole</h2>
+      <details class="code-toggle">
+        <summary>👁️ View Code</summary>
+        <pre><code class="language-css">/* CSS Black Hole */
+.art-black-hole {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle, #ff0 0%, #f00 50%, #000 75%);
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+</code></pre>
+      </details>
+    </section>
+    <!-- Art Card 8: Spiral -->
+    <section class="art-card">
+      <div class="artwork art-spiral"></div>
+      <h2 class="art-title">Spiral</h2>
+      <details class="code-toggle">
+        <summary>👁️ View Code</summary>
+        <pre><code class="language-css">/* CSS Spiral */
+.art-spiral {
+  width: 120px;
+  height: 120px;
+  background: repeating-radial-gradient(circle, #fff, #fff 10px, #000 10px, #000 20px);
+  border-radius: 50%;
+  animation: spin 5s linear infinite;
+}
+</code></pre>
+      </details>
+    </section>
   </main>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 </body>
